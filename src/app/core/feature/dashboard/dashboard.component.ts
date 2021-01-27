@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {DataService} from '../../service/data.service';
+import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 
 
@@ -12,7 +11,7 @@ import {Observable} from 'rxjs';
 export class DashboardComponent implements OnInit {
   single: any[] = [];
   view: any[] = [700, 400];
-  getData: Observable<any>;
+  @Input() getData: Observable<any>;
 
   // options
   showXAxis = true;
@@ -28,9 +27,7 @@ export class DashboardComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-  constructor(private service: DataService) {
-    this.getData = this.service.getData();
-  }
+  constructor() {}
 
   ngOnInit(): void {
   }
