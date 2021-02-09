@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
+import {Data} from '../../../shared/models/data';
 
 
 @Component({
@@ -11,7 +12,7 @@ import {Observable} from 'rxjs';
 export class DashboardComponent implements OnInit {
   single: any[] = [];
   view: any[] = [700, 400];
-  @Input() getData: Observable<any>;
+  @Input() getData: Observable<Data>;
 
   // options
   showXAxis = true;

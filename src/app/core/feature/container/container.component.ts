@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../service/data.service';
 import {Observable} from 'rxjs';
+import {Data} from '../../../shared/models/data';
 
 @Component({
   selector: 'app-container',
@@ -8,7 +9,7 @@ import {Observable} from 'rxjs';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit {
-  getData: Observable<any>;
+  getData: Observable<Data>;
 
   constructor(private service: DataService) { }
 
