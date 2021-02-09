@@ -12,7 +12,7 @@ import {Data} from '../../../shared/models/data';
 export class DashboardComponent implements OnInit {
   single: any[] = [];
   view: any[] = [700, 400];
-  @Input() getData: Observable<Data>;
+  @Input() getData$: Observable<Data>;
 
   // options
   showXAxis = true;

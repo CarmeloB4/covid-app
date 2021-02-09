@@ -9,12 +9,12 @@ import {Data} from '../../../shared/models/data';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit {
-  getData: Observable<Data>;
+  getData$: Observable<Data>;
 
   constructor(private service: DataService) { }
 
   ngOnInit(): void {
-    this.getData = this.service.getData();
+    this.getData$ = this.service.getData();
   }
 
 }
